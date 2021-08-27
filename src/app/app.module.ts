@@ -15,13 +15,17 @@ import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoComponent } from './todo/todo.component';
 import { MatCardModule } from '@angular/material/card';
+import { DialogComponent } from './dialog/dialog.component';
+import { DialogWindowComponent } from './dialog-window/dialog-window.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoBoardComponent,
     TodoListComponent,
-    TodoComponent
+    TodoComponent,
+    DialogComponent,
+    DialogWindowComponent
   ],
   imports: [
     BrowserModule,

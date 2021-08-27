@@ -16,9 +16,3 @@
 .header-container{
   margin: 4em;
 }
-.new-section{
-  position: fixed;
-  right: 2em;
-  bottom: 2em;
-  z-index: 9;
-}
