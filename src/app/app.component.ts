@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { Page } from './page';
-import { Pages } from './pages-list';
+
 import { PageService } from './page.service';
-import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +13,7 @@ export class AppComponent {
 
   pages: Page[] = [];
 
-  constructor(private PageService: PageService,public dialog: MatDialog) { }
+  constructor(private PageService: PageService) { }
 
   ngOnInit() {
     this.getPages();
@@ -25,14 +24,4 @@ export class AppComponent {
       .subscribe(pages => this.pages = pages);
   }
 
-  openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
-  }
 }
-
-
-@Component({
-  selector: 'dialog-elements-example-dialog',
-  templateUrl: 'dialog-elements-example-dialog.html',
-})
-export class DialogElementsExampleDialog {}
