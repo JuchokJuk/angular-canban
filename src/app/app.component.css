@@ -1,0 +1,24 @@
+.example-container {
+    width: 100%;
+    height: 100%;
+  }
+.example-sidenav-content {
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+
+}
+.example-sidenav {
+  width: fit-content;
+  transform: translate3d(calc(-100%), 0, 0);
+  visibility: visible !important;
+}
+.header-container{
+  margin: 4em;
+}
+.new-section{
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  z-index: 9;
+}
