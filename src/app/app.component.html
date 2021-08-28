@@ -1,19 +1,2 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer class="example-sidenav" mode="side" opened>
-    <div class="header-container">
-      <b>
-        <h2>{{title}}</h2>
-      </b>
-    </div>
-    <mat-selection-list #shoes [multiple]="false" class="side-menu-list">
-      <mat-list-option *ngFor="let page of pages" [value]="page" class="list">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">{{page.icon}}</mat-icon>
-        {{page.title}}
-      </mat-list-option>
-    </mat-selection-list>
-  </mat-drawer>
-  <div class="example-sidenav-content">
-    <app-todo-board></app-todo-board>
-  </div>
-</mat-drawer-container>
+<app-todo-board></app-todo-board>
 <app-dialog></app-dialog>

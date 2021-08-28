@@ -15,10 +15,10 @@ import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoComponent } from './todo/todo.component';
 import { MatCardModule } from '@angular/material/card';
-import { DialogComponent } from './dialog/dialog.component';
-import { DialogWindowComponent } from './dialog-window/dialog-window.component';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatInputModule} from '@angular/material/input';
+import { DialogComponent } from './new-todo-type-dialog/dialog.component';
+import { DialogWindowComponent } from './new-todo-dialog-type-window/dialog-window.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,

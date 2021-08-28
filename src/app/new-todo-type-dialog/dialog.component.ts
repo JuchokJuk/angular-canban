@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DialogWindowComponent } from '../dialog-window/dialog-window.component';
+import { DialogWindowComponent } from '../new-todo-dialog-type-window/dialog-window.component';
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',

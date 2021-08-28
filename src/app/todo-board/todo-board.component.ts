@@ -18,7 +18,7 @@ export class TodoBoardComponent implements OnInit {
   }
   getTodoTypeList(): void {
     this.todoTypeListService.getTodoTypeList()
-      .subscribe(todoTypeList => this.todoTypeList = this.todoTypeList);
+      .subscribe(todoTypeList => this.todoTypeList = todoTypeList);
       console.log(this.todoTypeList);
   }
 }

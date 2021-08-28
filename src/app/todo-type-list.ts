@@ -3,7 +3,7 @@ import { TodoType } from './todo-type';
 export const TODOTYPELIST: TodoType[] = [
     {
         id: 0,
-        title: 'нужно сделать',
+        title: 'Нужно сделать',
         items: [{
             title: 'полить цветы',
             text: 'гибискус, гладиолус, геацинт'
@@ -13,11 +13,16 @@ export const TODOTYPELIST: TodoType[] = [
         }]
     },
     {
-        id: 0,
-        title: 'в разработке',
+        id: 1,
+        title: 'В разработке',
         items: [{
             title: 'сделать салат',
             text: 'цезарь'
         }]
+    },
+    {
+        id: 2,
+        title: 'Готово',
+        items: []
     }
 ];

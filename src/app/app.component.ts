@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { Page } from './page';
-
-import { PageService } from './page.service';
 
 @Component({
   selector: 'app-root',
@@ -9,19 +6,11 @@ import { PageService } from './page.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular канбан';
+  title = 'angular-todo';
 
-  pages: Page[] = [];
-
-  constructor(private PageService: PageService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getPages();
-  }
 
-  getPages(): void {
-    this.PageService.getPages()
-      .subscribe(pages => this.pages = pages);
   }
-
 }

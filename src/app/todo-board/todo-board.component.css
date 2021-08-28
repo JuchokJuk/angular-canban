@@ -1,20 +1,11 @@
-
-
 .board-container{
-
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  padding: 2em;
 }
 .board{
- 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   gap: 1em;
 }
 .list{
   width: 20em;
-
 }

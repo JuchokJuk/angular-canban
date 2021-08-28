@@ -1,9 +1,9 @@
 <div class="task-list">
     <div class="first-line">
         <h3>{{todoType.title}}</h3>
-        <span>1</span>
+        <span>{{todoType.items.length}}</span>
     </div>
 
         <button mat-stroked-button color="primary" class="add-button"><mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon></button>
-    <app-todo></app-todo>
+    <app-todo *ngFor="let todoItem of todoType.items" [title]="todoItem.title" [text]="todoItem.text"></app-todo>
 </div>
