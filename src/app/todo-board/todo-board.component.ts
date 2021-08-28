@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-  interface Filter {
-    value: string;
-    viewValue: string;
-  }
+import { TodoType } from '../todo-type';
+import { TodoTypeListService } from '../todo-type-list.service';
 
 @Component({
   selector: 'app-todo-board',
@@ -12,28 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TodoBoardComponent implements OnInit {
-  selectedValue!: string;
-  todoType!:string;
+  todoTypeList: TodoType[] = [];
 
-  constructor() { }
+  constructor(private todoTypeListService: TodoTypeListService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.getTodoTypeList();
   }
-
-
-
-  foods: Filter[] = [
-    {value: 'day', viewValue: 'This day'},
-    {value: 'week', viewValue: 'This week'},
-    {value: 'month', viewValue: 'This month'},
-    {value: 'year', viewValue: 'This year'}
-  ];
-  todoTypes: string[] = [
-    'To do',
-    'In progress',
-    'Completed',
-    'custom#1',
-    'custom#2',
-    'custom#3'
-  ];
+  getTodoTypeList(): void {
+    this.todoTypeListService.getTodoTypeList()
+      .subscribe(todoTypeList => this.todoTypeList = this.todoTypeList);
+      console.log(this.todoTypeList);
+  }
 }

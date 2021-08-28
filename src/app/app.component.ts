@@ -9,7 +9,7 @@ import { PageService } from './page.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular kanban todo';
+  title = 'angular канбан';
 
   pages: Page[] = [];
 

@@ -13,5 +13,7 @@ export class DialogWindowComponent implements OnInit {
   }
 
   constructor() {}
-
+  createTodoType(){
+    
+  }
 }

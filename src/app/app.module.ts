@@ -17,7 +17,8 @@ import { TodoComponent } from './todo/todo.component';
 import { MatCardModule } from '@angular/material/card';
 import { DialogComponent } from './dialog/dialog.component';
 import { DialogWindowComponent } from './dialog-window/dialog-window.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,9 @@ import { DialogWindowComponent } from './dialog-window/dialog-window.component';
     MatToolbarModule,
     MatSelectModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,17 +1,5 @@
-<!--div class="board-container"-->
-    
-        <!--mat-form-field appearance="fill">
-            <mat-label>Sort by time</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field-->
-
-    <div class="board">
-        <div class="list" *ngFor="let todoType of todoTypes">
-            <app-todo-list [todoType]="todoType"></app-todo-list>
-        </div>
-    </div>
-<!--/div-->
+<div class="board">
+  <div class="list" *ngFor="let todoType of todoTypeList">
+    <app-todo-list [todoType]="todoType"></app-todo-list>
+  </div>
+</div>
