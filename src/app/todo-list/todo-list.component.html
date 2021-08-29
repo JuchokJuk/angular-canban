@@ -1,12 +1,10 @@
-<div class="task-list" cdkDropList  [cdkDropListData]="todoType.items"
-        (cdkDropListDropped)="drop($event)">
+<div class="task-list" cdkDropList [cdkDropListData]="todoType.items" (cdkDropListDropped)="drop($event)">
     <div class="first-line">
         <h3>{{todoType.title}}</h3>
         <span>{{todoType.items.length}}</span>
     </div>
 
     <app-new-todo-dialog-button [todoTypeId]="todoType.id"></app-new-todo-dialog-button>
-    <div class="cdk-drop-list example-list">
-        <app-todo *ngFor="let todoItem of todoType.items" [title]="todoItem.title" [text]="todoItem.text"></app-todo>
-    </div>
+    <app-todo *ngFor="let todoItem of todoType.items" [title]="todoItem.title" [text]="todoItem.text">
+    </app-todo>
 </div>
