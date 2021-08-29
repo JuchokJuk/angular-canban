@@ -1,7 +1,7 @@
 <div class="board-container">
-<div class="board">
-  <div class="list" *ngFor="let todoType of todoTypeList">
-    <app-todo-list [todoType]="todoType"></app-todo-list>
+  <div class="board" cdkDropListGroup>
+    <div class="list" *ngFor="let todoType of todoTypeList">
+      <app-todo-list [todoType]="todoType" ></app-todo-list>
+    </div>
   </div>
-</div>
 </div>

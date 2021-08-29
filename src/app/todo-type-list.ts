@@ -4,10 +4,10 @@ export const TODOTYPELIST: TodoType[] = [
     {
         id: 0,
         title: 'Нужно сделать',
-        items: [{
+        items: [{id:0,
             title: 'полить цветы',
             text: 'гибискус, гладиолус, геацинт'
-        }, {
+        }, {id:1,
             title: 'покормить животных',
             text: 'кошку и собаку'
         }]
@@ -15,7 +15,7 @@ export const TODOTYPELIST: TodoType[] = [
     {
         id: 1,
         title: 'В разработке',
-        items: [{
+        items: [{id:0,
             title: 'сделать салат',
             text: 'цезарь'
         }]

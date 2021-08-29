@@ -15,5 +15,9 @@ export class TodoTypeListService {
     const todoTypeList = of(TODOTYPELIST);
     return todoTypeList;
   }
-  
+
+  getTodoTypeById(id: number): Observable<TodoType> {
+    const todoType = TODOTYPELIST.find(h => h.id === id)!;
+    return of(todoType);
+  }
 }

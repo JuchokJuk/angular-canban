@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Новая задача</h1>
+<form class="example-form" form autocomplete="off" (submit)="createTodo(newTodoTitle.value, newTodoText.value)">
+  <div mat-dialog-content>
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Название задачи</mat-label>
+      <input #newTodoTitle matInput placeholder="Полить цветы">
+    </mat-form-field>
+<br>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Описание задачи</mat-label>
+      <textarea #newTodoText matInput placeholder="Фикусы и гладиолусы"></textarea>
+    </mat-form-field>
+
+
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Закрыть</button>
+    <button type="submit" mat-raised-button mat-dialog-close color="primary">Создать</button>
+  </div>
+
+</form>

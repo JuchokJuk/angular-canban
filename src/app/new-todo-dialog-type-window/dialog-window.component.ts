@@ -18,18 +18,15 @@ export class DialogWindowComponent implements OnInit {
   getTodoTypeList(): void {
     this.todoTypeListService.getTodoTypeList()
       .subscribe(todoTypeList => this.todoTypeList = todoTypeList);
-    console.log(this.todoTypeList);
   }
 
   constructor(private todoTypeListService: TodoTypeListService) { }
   ;
   createTodoType(newTodoType: string) {
-    console.log(newTodoType)
-    console.log(this.todoTypeList.length)
     this.todoTypeList.push(
 
       {
-        id: this.todoTypeList.length + 1,
+        id: this.todoTypeList.length,
         title: newTodoType,
         items: []
       }
