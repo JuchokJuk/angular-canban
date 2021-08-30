@@ -10,12 +10,22 @@ import { TodoColumn } from '../todo-column';
   styleUrls: ['./edit-todo-column-dialog-window.component.css']
 })
 export class EditTodoColumnDialogWindowComponent implements OnInit {
+  todoColumnList!: TodoColumn[];
   constructor(private todoColumnService: TodoColumnService, @Inject(MAT_DIALOG_DATA) public todoColumn: any) { };
   ngOnInit() {
-    
+    this.getTodoColumnList();
+  }
+  getTodoColumnList(): void {
+    this.todoColumnService.getTodoColumnList()
+      .subscribe(todoColumnList => this.todoColumnList = todoColumnList);
   }
 
   editTodoColumn(editedTitle: string) {
     this.todoColumn.title = editedTitle;
   }
+  deleteTodoColumn() {
+    this.todoColumnList = [];
+    console.log(this.todoColumnList)
+  }
+  
 }
