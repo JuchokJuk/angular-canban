@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoType } from '../todo-type';
-import { TodoTypeListService } from '../todo-type-list.service';
+import { TodoColumn } from '../todo-column';
+import { TodoColumnService } from '../todo-column.service';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-todo-board',
@@ -9,15 +10,19 @@ import { TodoTypeListService } from '../todo-type-list.service';
 })
 
 export class TodoBoardComponent implements OnInit {
-  todoTypeList: TodoType[] = [];
+  todoColumnList: TodoColumn[] = [];
 
-  constructor(private todoTypeListService: TodoTypeListService) { }
+  constructor(private todoColumnService: TodoColumnService) { }
 
-  ngOnInit(){
-    this.getTodoTypeList();
+  ngOnInit() {
+    this.getTodoColumnList();
   }
-  getTodoTypeList(): void {
-    this.todoTypeListService.getTodoTypeList()
-      .subscribe(todoTypeList => this.todoTypeList = todoTypeList);
+  getTodoColumnList(): void {
+    this.todoColumnService.getTodoColumnList()
+      .subscribe(todoColumnList => this.todoColumnList = todoColumnList);
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.todoColumnList, event.previousIndex, event.currentIndex);
   }
 }

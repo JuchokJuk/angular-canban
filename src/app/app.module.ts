@@ -2,18 +2,21 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoColumnComponent } from './todo-column/todo-column.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoBoardComponent } from './todo-board/todo-board.component';
-import { DialogComponent } from './new-todo-type-dialog/dialog.component';
-import { DialogWindowComponent } from './new-todo-dialog-type-window/dialog-window.component';
+
+import { NewTodoColumnDialogButtonComponent } from './new-todo-column-dialog-button/new-todo-column-dialog-button.component';
+import { NewTodoColumnDialogWindowComponent } from './new-todo-column-dialog-window/new-todo-column-dialog-window.component';
+
 import { NewTodoDialogButtonComponent } from './new-todo-dialog-button/new-todo-dialog-button.component';
-import { NewTodoDialogWindowComponent } from './new-todo-dialog-window/new-todo-dialog-window.component'
+import { NewTodoDialogWindowComponent } from './new-todo-dialog-window/new-todo-dialog-window.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatButtonModule } from '@angular/material/button'
-import { MatIconModule } from '@angular/material/icon'
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -30,10 +33,10 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
   declarations: [
     AppComponent,
     TodoBoardComponent,
-    TodoListComponent,
+    TodoColumnComponent,
     TodoComponent,
-    DialogComponent,
-    DialogWindowComponent,
+    NewTodoColumnDialogButtonComponent,
+    NewTodoColumnDialogWindowComponent,
     NewTodoDialogButtonComponent,
     NewTodoDialogWindowComponent
   ],

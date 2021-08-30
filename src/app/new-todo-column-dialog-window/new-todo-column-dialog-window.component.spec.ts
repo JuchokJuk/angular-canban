@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DialogWindowComponent } from './dialog-window.component';
+import { NewTodoColumnDialogWindowComponent } from './new-todo-column-dialog-window.component';
 
 describe('DialogWindowComponent', () => {
-  let component: DialogWindowComponent;
-  let fixture: ComponentFixture<DialogWindowComponent>;
+  let component: NewTodoColumnDialogWindowComponent;
+  let fixture: ComponentFixture<NewTodoColumnDialogWindowComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogWindowComponent ]
+      declarations: [ NewTodoColumnDialogWindowComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DialogWindowComponent);
+    fixture = TestBed.createComponent(NewTodoColumnDialogWindowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

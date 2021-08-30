@@ -1,6 +1,6 @@
-import { TodoType } from './todo-type';
+import { TodoColumn } from './todo-column';
 
-export const TODOTYPELIST: TodoType[] = [
+export const TODOCOLUMNLIST: TodoColumn[] = [
     {
         id: 0,
         title: 'Нужно сделать',

@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { TodoTypeListService } from '../todo-type-list.service';
-import { TodoType } from '../todo-type';
+import { TodoColumnService } from '../todo-column.service';
+import { TodoColumn } from '../todo-column';
 import { Input } from '@angular/core';
 
 
@@ -13,24 +13,24 @@ import { Input } from '@angular/core';
 export class NewTodoDialogWindowComponent implements OnInit {
   @Input()
 
-  todoType!: TodoType;
+  todoColumn!: TodoColumn;
 
-  constructor(private todoTypeListService: TodoTypeListService, @Inject(MAT_DIALOG_DATA) public todoTypeId: any) { };
+  constructor(private todoColumnService: TodoColumnService, @Inject(MAT_DIALOG_DATA) public todoColumnId: any) { };
 
   ngOnInit() {
-    this.getTodoTypeById();
+    this.getTodoColumnById();
   }
-  getTodoTypeById(): void {
-    const id:number = this.todoTypeId;
-    this.todoTypeListService.getTodoTypeById(id)
-      .subscribe(todoType => this.todoType = todoType);
+  getTodoColumnById(): void {
+    const id:number = this.todoColumnId;
+    this.todoColumnService.getTodoColumnById(id)
+      .subscribe(todoColumn => this.todoColumn = todoColumn);
   }
 
-  createTodo(newTodoTitle: string, newTodoText: string) {
+  createNewTodo(newTodoTitle: string, newTodoText: string) {
    
-    this.todoType.items.push(
+    this.todoColumn.items.push(
       {
-        id: this.todoType.items.length,
+        id: this.todoColumn.items.length,
         title: newTodoTitle,
         text: newTodoText
       }

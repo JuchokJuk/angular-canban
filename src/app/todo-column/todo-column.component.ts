@@ -1,21 +1,21 @@
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { TodoType } from '../todo-type';
-import { TodoItem } from '../todo-item';
+import { TodoColumn } from '../todo-column';
+import { Todo } from '../todo';
 
 @Component({
-  selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.css']
+  selector: 'app-todo-column',
+  templateUrl: './todo-column.component.html',
+  styleUrls: ['./todo-column.component.css']
 })
-export class TodoListComponent implements OnInit {
-  @Input() todoType!: TodoType;
+export class TodoColumnComponent implements OnInit {
+  @Input() todoColumn!: TodoColumn;
   constructor() { }
 
   ngOnInit(): void {
   }
-  drop(event: CdkDragDrop<TodoItem[]>) {
+  drop(event: CdkDragDrop<Todo[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
