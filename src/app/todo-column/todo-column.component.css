@@ -1,32 +1,40 @@
 .todo-list{
-    min-height: 32em;
-    width: 20em;
-    background: #F3F4FB;
-    border-radius: 2em;
+  height: calc(100% - 2em);
+  padding: 1em;
+  width: 18em;
+  background: #F3F4FB;
+  border-radius: 2em 2em 0 0;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  cursor: move;
 }
 .first-line{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-    padding-bottom: 0;
-    height: 2em;
-}.first-line span{
-    background: #E7E9F6;
-    color: #3F51B5;
-    height: 2em;
-    width: 2em;
-    border-radius: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  width: 18em;
+  grid-template-columns: 1em [title-start] 1fr [title-end] 1em [edit-start] 2em [edit-end] 1em [amount-start] 2em [amount-end];
+  grid-template-rows: [start] 2em [controls-end] 1fr [end];
 }
 .first-line h3{
-    margin-left: 1em !important;
+  grid-column: title-start/ title-end;
+  grid-row: start / end;
+  word-break: break-word;
 }
+.amount{
+  grid-column: amount-start/ amount-end;
+  grid-row: start / controls-end;
 
-
+  background: #E7E9F6;
+  color: #3F51B5;
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+app-edit-todo-column-dialog-button{
+  grid-column: edit-start/ edit-end;
+  grid-row: start / controls-end;
+}
 
 .cdk-drag-preview {
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),

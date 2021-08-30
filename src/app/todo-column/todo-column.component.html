@@ -1,10 +1,12 @@
-<div class="todo-list" cdkDropList [cdkDropListData]="todoColumn.items" (cdkDropListDropped)="drop($event)"  cdkDrag>
+<div class="todo-list" cdkDropList [cdkDropListData]="todoColumn.items" (cdkDropListDropped)="drop($event)" cdkDrag>
     <div class="first-line">
         <h3>{{todoColumn.title}}</h3>
-        <span>{{todoColumn.items.length}}</span>
+        <span class="amount">{{todoColumn.items.length}}</span>
+
+        <app-edit-todo-column-dialog-button [todoColumn]="todoColumn"></app-edit-todo-column-dialog-button>
     </div>
 
-    <app-new-todo-dialog-button [todoColumnId]="todoColumn.id"></app-new-todo-dialog-button>
+    <app-new-todo-dialog-button [todoColumn]="todoColumn"></app-new-todo-dialog-button>
     <app-todo *ngFor="let todoItem of todoColumn.items" [title]="todoItem.title" [text]="todoItem.text">
     </app-todo>
 </div>

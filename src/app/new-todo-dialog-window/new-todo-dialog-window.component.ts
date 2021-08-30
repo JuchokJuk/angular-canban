@@ -11,31 +11,21 @@ import { Input } from '@angular/core';
   styleUrls: ['./new-todo-dialog-window.component.css']
 })
 export class NewTodoDialogWindowComponent implements OnInit {
-  @Input()
 
-  todoColumn!: TodoColumn;
-
-  constructor(private todoColumnService: TodoColumnService, @Inject(MAT_DIALOG_DATA) public todoColumnId: any) { };
+  constructor(@Inject(MAT_DIALOG_DATA) public todoColumn: any) { };
 
   ngOnInit() {
-    this.getTodoColumnById();
-  }
-  getTodoColumnById(): void {
-    const id:number = this.todoColumnId;
-    this.todoColumnService.getTodoColumnById(id)
-      .subscribe(todoColumn => this.todoColumn = todoColumn);
   }
 
   createNewTodo(newTodoTitle: string, newTodoText: string) {
-   
+
     this.todoColumn.items.push(
       {
         id: this.todoColumn.items.length,
         title: newTodoTitle,
         text: newTodoText
       }
-
     )
+    
   }
-
 }

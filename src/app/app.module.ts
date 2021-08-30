@@ -12,6 +12,10 @@ import { NewTodoColumnDialogWindowComponent } from './new-todo-column-dialog-win
 import { NewTodoDialogButtonComponent } from './new-todo-dialog-button/new-todo-dialog-button.component';
 import { NewTodoDialogWindowComponent } from './new-todo-dialog-window/new-todo-dialog-window.component';
 
+import { EditTodoColumnDialogButtonComponent } from './edit-todo-column-dialog-button/edit-todo-column-dialog-button.component';
+import { EditTodoColumnDialogWindowComponent } from './edit-todo-column-dialog-window/edit-todo-column-dialog-window.component';
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -38,7 +42,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     NewTodoColumnDialogButtonComponent,
     NewTodoColumnDialogWindowComponent,
     NewTodoDialogButtonComponent,
-    NewTodoDialogWindowComponent
+    NewTodoDialogWindowComponent,
+    EditTodoColumnDialogButtonComponent,
+    EditTodoColumnDialogWindowComponent
   ],
   imports: [
     BrowserModule,

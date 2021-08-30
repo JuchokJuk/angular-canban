@@ -2,6 +2,7 @@ import { Component, Inject, Input, OnInit } from '@angular/core';
 
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NewTodoDialogWindowComponent } from '../new-todo-dialog-window/new-todo-dialog-window.component';
+import { TodoColumn } from '../todo-column';
 @Component({
   selector: 'app-new-todo-dialog-button',
   templateUrl: './new-todo-dialog-button.component.html',
@@ -9,7 +10,7 @@ import { NewTodoDialogWindowComponent } from '../new-todo-dialog-window/new-todo
 })
 export class NewTodoDialogButtonComponent implements OnInit {
   @Input()
-  todoTypeId!: number;
+  todoColumn!: TodoColumn;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -17,9 +18,8 @@ export class NewTodoDialogButtonComponent implements OnInit {
 
   openDialogNewTodo() {
     this.dialog.open(NewTodoDialogWindowComponent, {
-      data: this.todoTypeId
+      data: this.todoColumn
     });
   }
 
 }
-
