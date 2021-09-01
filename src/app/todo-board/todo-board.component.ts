@@ -12,14 +12,16 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class TodoBoardComponent implements OnInit {
   todoColumnList: TodoColumn[] = [];
 
-  constructor(private todoColumnService: TodoColumnService) { }
+  constructor(private todoColumnService: TodoColumnService) {  
+  }
+
 
   ngOnInit() {
     this.getTodoColumnList();
   }
+
   getTodoColumnList(): void {
-    this.todoColumnService.getTodoColumnList()
-      .subscribe(todoColumnList => this.todoColumnList = todoColumnList);
+    this.todoColumnList = this.todoColumnService.getTodoColumnList();
   }
 
   drop(event: CdkDragDrop<string[]>) {

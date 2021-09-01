@@ -16,21 +16,12 @@ export class NewTodoColumnDialogWindowComponent implements OnInit {
     this.getTodoColumnList();
   }
   getTodoColumnList(): void {
-    this.todoColumnService.getTodoColumnList()
-      .subscribe(todoColumnList => this.todoColumnList = todoColumnList);
+    this.todoColumnList = this.todoColumnService.getTodoColumnList();
   }
 
   constructor(private todoColumnService: TodoColumnService) { }
   ;
-  createNewTodoColumn(newTodoColumn: string) {
-    this.todoColumnList.push(
-
-      {
-        id: this.todoColumnList.length,
-        title: newTodoColumn,
-        items: []
-      }
-
-    )
+  createNewTodoColumn(newTodoColumnTitle: string) {
+    this.todoColumnService.addTodoColumn(newTodoColumnTitle);
   }
 }

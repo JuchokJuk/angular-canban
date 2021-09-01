@@ -1,11 +1,11 @@
 <h1 mat-dialog-title>Новый столбец</h1>
-<form class="margin-top" form autocomplete="off" (submit)="createNewTodoColumn(newTodoColumn.value)">
+<form class="margin-top" form autocomplete="off" (submit)="createNewTodoColumn(newTodoColumnTitle.value)">
   <div mat-dialog-content>
 
 
     <mat-form-field appearance="fill">
       <mat-label>Название столбца</mat-label>
-      <input #newTodoColumn matInput placeholder="в разработке">
+      <input #newTodoColumnTitle matInput placeholder="в разработке">
     </mat-form-field>
 
 
